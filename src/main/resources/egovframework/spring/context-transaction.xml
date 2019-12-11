@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+
+	<!-- @Transaction 을 사용 하기 위한 정의 -->
+<!--	<tx:annotation-driven transaction-manager="txManager"/>-->
+
+	<!-- 트랜잭션 설정 데이터소스를 기반으로 트랜잭션을 관리하는 Tx 정의 스프링에서 이미 제공되고 있기에 클래스만 호출  -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- tx:advice 태그를 이용한 AOP 트랜잭션 처리 -->
+	<!-- 해당 트랜잭션을 적용 시킬 메소드의 이름과 옵션을 정의 아래의 경우 예외가 발생시 롤백을 진행 -->
+<!--	<tx:advice id="txAdvice" transaction-manager="txManager">-->
+<!--		<tx:attributes>-->
+<!--			<tx:method name="*" rollback-for="Exception" read-only="true"/>-->
+<!--		</tx:attributes>-->
+<!--	</tx:advice>-->
+
+<!--	&lt;!&ndash; 실제 선언한 tx:advice 태그 트랜잭션을 이용하기 위해서는 AOP를 적용해줘야함 &ndash;&gt;-->
+<!--	<aop:config>-->
+<!--&lt;!&ndash;		<aop:pointcut id="requiredTx" expression="execution(* egovframework.example.sample..impl.*Impl.*(..))"/>&ndash;&gt;-->
+<!--		<aop:pointcut id="requiredTx" expression="execution(* aCms.system..*Service.create(..))"/>-->
+<!--		<aop:advisor advice-ref="txAdvice" pointcut-ref="requiredTx" />-->
+<!--	</aop:config>-->
+
+</beans>

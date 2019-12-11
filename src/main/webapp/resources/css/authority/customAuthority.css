@@ -1,0 +1,13 @@
+.table-responsive {
+    position: relative;
+    width: 50%;
+    margin-right: 1%;
+    float: left;
+}
+
+.table-right {
+    position: relative;
+    width: 49%;
+    height: 100%;
+    float: left;
+}

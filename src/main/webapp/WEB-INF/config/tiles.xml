@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- base-definition -->
+    <definition name="base-definition"
+                template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/template/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+    </definition>
+
+    <definition name="user-base-definition"
+                template="WEB-INF/views/tiles/layouts/userDefaultLayout.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/user/userDefaultHeader.jsp" />
+        <put-attribute name="body" value="" />
+    </definition>
+
+    <definition name="user-header"
+                template="WEB-INF/views/tiles/layouts/userDefaultLayout.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+        <put-attribute name="body" value="" />
+    </definition>
+
+    <!-- 샘플 완료 페이지 -->
+    <definition name="egovSampleList" extends="base-definition">
+        <put-attribute name="title" value="샘플리스트" />
+        <put-attribute name="body" value="/WEB-INF/views/egovframework/example/sample/egovSampleList.jsp" />
+    </definition>
+
+    <!-- base-definition -->
+    <definition name="full-jsp"
+                template="/WEB-INF/views/tiles/layouts/empty.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="body" value="" />
+        <!--<put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />-->
+    </definition>
+
+    <!-- Admin Main Page -->
+    <definition name="adminMainPage" extends="base-definition">
+        <put-attribute name="title" value="Welcome" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/main/main.jsp" />
+    </definition>
+
+    <!-- Common(User) Main Page -->
+    <definition name="mainPage" extends="user-base-definition">
+        <put-attribute name="title" value="" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/main/index.jsp" />
+    </definition>
+
+    <!-- Menu List -->
+    <definition name="menuList" extends="base-definition">
+        <put-attribute name="title" value="메뉴 리스트" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/menu/list.jsp" />
+    </definition>
+
+    <!-- Menu Write -->
+    <definition name="menuWrite" extends="base-definition">
+        <put-attribute name="title" value="메뉴 생성" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/menu/write.jsp" />
+    </definition>
+
+    <!-- Sign Up Page -->
+    <definition name="JoinMember" extends="base-definition">
+        <put-attribute name="title" value="AccountAdd" />
+        <put-attribute name="body" value="/WEB-INF/views/cms.admin/account/accountAdd.jsp" />
+    </definition>
+
+    <!-- Sign Up Page -->
+    <definition name="AccountList" extends="base-definition">
+        <put-attribute name="title" value="담당자리스트" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/account/accountList.jsp" />
+    </definition>
+
+    <!-- 회원가입 완료 페이지 -->
+    <definition name="JoinComplete" extends="base-definition">
+        <put-attribute name="title" value="JoinComplete" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/account/JoinComplete.jsp" />
+    </definition>
+
+    <!-- Login Page -->
+    <definition name="loginPage" extends="full-jsp">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/login/login.jsp" />
+    </definition>
+
+    <!-- 권한 작성 페이지 -->
+    <definition name="authority_write" extends="base-definition">
+        <put-attribute name="title" value="권한 관리" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/authority/write.jsp" />
+    </definition>
+
+    <!-- 권한 리스트 페이지 -->
+    <definition name="authority_list" extends="base-definition">
+        <put-attribute name="title" value="권한 관리" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/authority/list.jsp" />
+    </definition>
+
+    <!-- 권한 작성 페이지 -->
+    <definition name="division_write" extends="base-definition">
+        <put-attribute name="title" value="부서 관리" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/division/write.jsp" />
+    </definition>
+
+    <!-- 권한 리스트 페이지 -->
+    <definition name="division_list" extends="base-definition">
+        <put-attribute name="title" value="부서 관리" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/division/list.jsp" />
+    </definition>
+
+    <!-- 게시판 리스트 페이지 -->
+    <definition name="boardList" extends="base-definition">
+        <put-attribute name="title" value="게시판 관리 리스트" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/board/boardList.jsp" />
+    </definition>
+
+    <!-- 게시판 템플릿 -->
+    <definition name="boardTemplate" extends="base-definition">
+        <put-attribute name="title" value="게시판 템플릿" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/template/template.jsp" />
+    </definition>
+
+    <!-- 게시판 리스트 페이지 생성 -->
+    <definition name="boardDetail" extends="base-definition">
+        <put-attribute name="title" value="리스트형 게시판 생성" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/board/boardWrite.jsp" />
+    </definition>
+
+    <!-- 게시판 템플릿 -->
+    <definition name="boardDetailTemplate" extends="base-definition">
+        <put-attribute name="title" value="게시판 템플릿" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/detail/template_detail.jsp" />
+    </definition>
+
+    <!-- 게시판 list template 페이지 -->
+    <definition name="board_list_template" extends="base-definition">
+        <put-attribute name="title" value="리스트형 템플릿" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/template/board_list_template.jsp" />
+    </definition>
+
+    <!-- 유저 게시판 페이지 -->
+    <definition name="userBoardTemplate" extends="full-jsp">
+        <put-attribute name="title" value="유저 게시판 템플릿"/>
+        <put-attribute name="body" value="/WEB-INF/views/cms/user/board/userBoard.jsp"/>
+    </definition>
+
+    <!-- 유저 게시글 작성 페이지 -->
+    <definition name="userBoardListTemplateWrite" extends="full-jsp">
+        <put-attribute name="title" value="유저 게시글 작성" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/user/board/userBoardListTemplateWrite.jsp" />
+    </definition>
+
+    <!-- 유저 게시글 답변 업데이트 페이지 -->
+    <definition name="userBoardContentAnswerUpdate" extends="full-jsp">
+        <put-attribute name="title" value="유저 게시글 답변 업데이트" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/user/board/write/userBoardContentAnswerModify.jsp"/>
+    </definition>
+
+    <definition name="userBoardListTemplateModify" extends="full-jsp">
+        <put-attribute name="title" value="유저 게시글 수정" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/user/board/write/userBoardModify.jsp" />
+    </definition>
+
+    <definition name="userBoardContentDetailTemplate" extends="full-jsp">
+        <put-attribute name="title" value="유저 게시판 디테일" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/user/board/user_template_detail.jsp" />
+    </definition>
+
+    <!-- 게시판 QnA template 페이지 -->
+    <definition name="board_qna_template" extends="base-definition">
+        <put-attribute name="title" value="QnA형 템플릿" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/template/board_qna_template.jsp" />
+    </definition>
+
+    <!-- 게시판 list template detail main 페이지 -->
+    <definition name="boardContentDetailTemplate" extends="base-definition">
+        <put-attribute name="title" value="main 템플릿 생성"/>
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/detail/template_detail.jsp" />
+    </definition>
+
+    <!-- 게시판 list template write 페이지 -->
+    <definition name="boardListTemplateWrite" extends="base-definition">
+        <put-attribute name="title" value="리스트 템플릿 생성" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/write/board_list_template_write.jsp" />
+    </definition>
+
+    <!-- 게시판 qna template write 페이지 -->
+    <definition name="boardQnaTemplateWrite" extends="base-definition">
+        <put-attribute name="title" value="QnA 템플릿 생성" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/write/board_qna_template_write.jsp" />
+    </definition>
+
+    <!-- 게시판 qna template detail 페이지 -->
+    <definition name="board_qna_template_detail" extends="base-definition">
+        <put-attribute name="title" value="Qna 템플릿 상세보기" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/detail/board_qna_template_detail.jsp" />
+    </definition>
+
+    <!-- 게시판 list template detail 페이지 -->
+    <definition name="board_list_template_detail" extends="base-definition">
+        <put-attribute name="title" value="List 템플릿 상세보기" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/detail/board_list_template_detail.jsp" />
+    </definition>
+
+    <!-- 게시판 content update page -->
+    <definition name="boardContentUpdate" extends="base-definition">
+        <put-attribute name="title" value="게시글 업데이트" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/write/board_content_modify.jsp"/>
+    </definition>
+
+    <!-- 게시판 content update page -->
+    <definition name="boardContentAnswerUpdate" extends="base-definition">
+        <put-attribute name="title" value="게시글 답변 업데이트" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/boardHtml/write/board_content_answer_modify.jsp"/>
+    </definition>
+
+    <!-- 생성 페이지 -->
+    <definition name="generatepage" extends="base-definition">
+        <put-attribute name="title" value="생성 정의 페이지"/>
+        <put-attribute name="body" value="/WEB-INF/views/tiles/template/PageGenerate.jsp"/>
+    </definition>
+
+    <!-- 코드 디테일 페이지 -->
+    <definition name="codeDetailPage" extends="base-definition">
+        <put-attribute name="title" value="코드 디테일" />
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/code/codeDetailWrite.jsp" />
+    </definition>
+
+    <!-- 코드 리스트 페이지 -->
+    <definition name="codeList" extends="base-definition">
+        <put-attribute name="title" value="코드 리스트 페이지"/>
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/code/list.jsp"/>
+    </definition>
+
+    <!-- 코드 생성 페이지 -->
+    <definition name="codeWrite" extends="base-definition">
+        <put-attribute name="title" value="코드 생성 페이지"/>
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/code/write.jsp"/>
+    </definition>
+
+    <!-- 메뉴 상세 리스트 페이지 -->
+    <definition name="menuDetailList" extends="base-definition">
+        <put-attribute name="title" value="메뉴 상세 리스트 페이지"/>
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/menu/detailList.jsp"/>
+    </definition>
+
+    <!-- 메뉴 상세 리스트 페이지 -->
+    <definition name="menuDetailWrite" extends="base-definition">
+        <put-attribute name="title" value="메뉴 상세 생성 페이지"/>
+        <put-attribute name="body" value="/WEB-INF/views/cms/admin/system/menu/detailWrite.jsp"/>
+    </definition>
+
+
+</tiles-definitions>

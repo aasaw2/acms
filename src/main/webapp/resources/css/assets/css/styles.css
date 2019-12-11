@@ -1,0 +1,75 @@
+.navbar.navbar-dark.navbar-expand-md.bg-dark {
+  background-color: #000!important;
+  opacity: 0.8;
+}
+
+.navbar-dark .navbar-nav .nav-link .apple.logo {
+  color: #fff;
+  font-size: 13px;
+}
+
+.navbar-dark .navbar-nav .nav-link .apple-logo {
+  color: #fff;
+  font-size: 21px;
+  line-height: 0;
+}
+
+.amazingpeople {
+}
+
+.amazing {
+  padding-top: 100px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.amazing h2 {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.amazing h1 {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.product .links {
+  font-size: 21px;
+  margin-bottom: 80px;
+}
+
+.product .links .learn-more {
+}
+
+.amazing .links {
+  font-size: 21px;
+  margin-bottom: 80px;
+}
+
+.amazing .links .learn-more {
+  margin-right: 20px;
+}
+
+.amazing.mainpage {
+  background-color: #f9f9f9;
+}
+
+.amazing .airpot {
+  background-color: #121217;
+}
+
+.amazing.dark {
+  background-color: #121217;
+  color: #fff;
+}
+
+.amazing.dark {
+  background-color: #121217;
+  color: #fff;
+}
+
+.amazing.icon {
+  background-color: #242424;
+  color: #fff;
+}
+
