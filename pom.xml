@@ -21,7 +21,7 @@
         <spring.maven.artifact.version>4.2.4.RELEASE</spring.maven.artifact.version>
         <egovframework.rte.version>3.7.0</egovframework.rte.version>
         <apachetiles.version>3.0.5</apachetiles.version>
-        <springsecurity.version>4.0.4.RELEASE</springsecurity.version>
+        <springsecurity.version>5.2.1.RELEASE</springsecurity.version>
     </properties>
 
 
